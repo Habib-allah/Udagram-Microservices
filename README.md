@@ -17,8 +17,11 @@ Instructions:
   - Run the containers:
       - docker-compose up
     
-  - Create eks cluster from a config file (see https://eksctl.io/usage/creating-and-managing-clusters/): 
-    - eksctl create cluster -f cluster.yaml
+  - Run Locally:
+      - docker-compose up
+    
+  - Create eks cluster from a config file (see https://eksctl.io/usage-creating-and-managing-clusters/): 
+    - eksctl create cluster -f cluster.yaml 
 
   - Apply confiMap and secrets: 
     - kubectl apply -f env-configmap.yaml
@@ -26,14 +29,14 @@ Instructions:
     - kubectl apply -f env-secret.yaml 
 
   - Apply Kubernetes deployments:
-    - kubectl apply -f beckend-feed-deployment.yaml 
-    - kubectl apply -f beckend-user-deployment.yaml
+    - kubectl apply -f backend-feed-deployment.yaml 
+    - kubectl apply -f backend-user-deployment.yaml
     - kubectl apply -f frontend-deployment.yaml
     - kubectl apply -f reverseproxy-deployment.yaml
 
   - Apply Kubernetes services:
-    - kubectl apply -f beckend-feed-service.yaml 
-    - kubectl apply -f beckend-user-service.yaml
+    - kubectl apply -f backend-feed-service.yaml 
+    - kubectl apply -f backend-user-service.yaml
     - kubectl apply -f frontend-service.yaml
     - kubectl apply -f reverseproxy-service.yaml
   
