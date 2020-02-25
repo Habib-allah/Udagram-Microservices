@@ -1,21 +1,21 @@
-# Cloud-developer-Project : Udacity Nano degree project
-
+# Udagram Microservices : Udacity Nano degree project
 Links to Docker-hub images: 
-  - Feed: https://hub.docker.com/repository/docker/zakidokerid/udacity-restapi-feed
-  - User: https://hub.docker.com/repository/docker/zakidokerid/udacity-restapi-user 
-  - Frontend: https://hub.docker.com/repository/docker/zakidokerid/udacity-frontend 
-  - ReverseProxy: https://hub.docker.com/repository/docker/zakidokerid/reverseproxy
+  - Feed: https://hub.docker.com/repository/docker/habiballaah/udacity-restapi-feed
+  - User: https://hub.docker.com/repository/docker/habiballaah/udacity-restapi-user 
+  - Frontend: https://hub.docker.com/repository/docker/habiballaah/udacity-frontend 
+  - ReverseProxy: https://hub.docker.com/repository/docker/habiballaah/reverseproxy
 
 Screenshots are located in the root of the repository.
 
 Instructions: 
   - Build the images: 
       - docker-compose -f docker-compose-build.yaml build --parallel 
+
   - Push the images: 
       - docker-compose -f docker-compose-build.yaml push
     
-  - Create eks cluster: 
-    - eksctl create cluster   --version 1.14   --region us-east-2   --node-type t3.medium   --nodes 4   --nodes-min 1   --nodes-max 5   --name udagram
+  - Create eks cluster from a config file (see https://eksctl.io/usage/creating-and-managing-clusters/): 
+    - eksctl create cluster -f cluster.yaml
 
   - Apply confiMap and secrets: 
     - kubectl apply -f env-configmap.yaml
