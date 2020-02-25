@@ -13,6 +13,9 @@ Instructions:
 
   - Push the images: 
       - docker-compose -f docker-compose-build.yaml push
+
+  - Run the containers:
+      - docker-compose up
     
   - Create eks cluster from a config file (see https://eksctl.io/usage/creating-and-managing-clusters/): 
     - eksctl create cluster -f cluster.yaml
