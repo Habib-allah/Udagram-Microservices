@@ -12,7 +12,3 @@ services:
     build:
       context: ../../udacity-c3-restapi-feed  
     image: habiballaah/udacity-restapi-feed
-  frontend:
-    build:
-      context: ../../udacity-c3-frontend  
-    image: habiballaah/udacity-frontend:latest
